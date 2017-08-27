@@ -1,0 +1,99 @@
+<div class="col-sm-10 col-sm-offset-1">
+  <h2>Customer Details</h2>
+  <form class="form-horizontal" name="customerForm" ng-submit="submitForm()" novalidate>
+    <input type="text" hidden="true" ng-model="customer.isAdd">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="id">Customer Id</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" ng-model="customer.id" name="id" placeholder="Customer Id" readonly>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="firstname">First Name</label>
+      <div class="col-sm-10 has-feedback"
+      ng-class="{'has-error':(customerForm.firstname.$invalid && !customerForm.firstname.$pristine),
+                'has-success':customerForm.firstname.$valid}">
+        <input type="text" class="form-control" ng-model="customer.firstname" name="firstname" placeholder="First Name" required>
+        <span class="glyphicon form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="lastname">Last Name</label>
+      <div class="col-sm-10 has-feedback"
+      ng-class="{'has-error':(customerForm.lastname.$invalid && !customerForm.lastname.$pristine),
+                'has-success':customerForm.lastname.$valid}">
+        <input type="text" class="form-control" ng-model="customer.lastname" name="lastname" placeholder="Last Name" required>
+        <span class="glyphicon form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="birthday">Birth Day</label>
+      <div class="col-sm-10 has-datepicker-feedback"
+      ng-class="{'has-error':(customerForm.birthday.$invalid && !customerForm.birthday.$pristine),
+                'has-success':customerForm.birthday.$valid}">
+        <p class="input-group">
+          <input type="text" class="form-control" ng-model="customer.birthday" name="birthday" placeholder="Birth Day" required
+          uib-datepicker-popup
+          is-open="birthdayDatePicker.opened"
+          datepicker-options="dateOptions"
+          close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openBirthdayDatePicker()">
+              <i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+        <span class="glyphicon form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="gender">Gender</label>
+      <div class="col-sm-10">
+        <dropdown-list
+        stepper-error-class="has-error"
+        stepper-success-class="has-success"
+        stepper-value-model="customer.gender"
+        stepper-value-name="gender"
+        stepper-label-placeholder="Gender"
+        stepper-value-required="true"
+        stepper-value-class="form-control"></dropdown-list>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="lastcontact">Last Contact</label>
+      <div class="col-sm-10 has-datepicker-feedback"
+      ng-class="{'has-error':(customerForm.lastcontact.$invalid && !customerForm.lastcontact.$pristine),
+                'has-success':customerForm.lastcontact.$valid}">
+        <p class="input-group">
+          <input type="text" class="form-control" ng-model="customer.lastcontact" name="lastcontact" placeholder="Last Contact" required
+          uib-datepicker-popup
+          is-open="lastcontactDatePicker.opened"
+          datepicker-options="dateOptions"
+          close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openLastcontactDatePicker()">
+              <i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+        <span class="glyphicon form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="lifetime">Customer Lifetime Value</label>
+      <div class="col-sm-10 has-feedback"
+      ng-class="{'has-error':(customerForm.lifetime.$invalid && !customerForm.lifetime.$pristine),
+                'has-success':customerForm.lifetime.$valid}">
+        <input type="text" class="form-control"
+        ng-model="customer.lifetime"
+        name="lifetime" placeholder="Customer Lifetime Value"
+        required format-lifetime-value>
+        <span class="glyphicon form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary" ng-disabled="customerForm.$invalid">Save</button>
+        <button type="button" class="btn btn-primary" ng-click="goto('/customers')">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

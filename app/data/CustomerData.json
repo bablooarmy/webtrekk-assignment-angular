@@ -1,0 +1,5 @@
+[{"id":1, "firstname":"Peter", "lastname":"Smith", "birthday":"1996-10-12","gender":"m","lastcontact":"2013-06-01","lifetime":19112},
+{"id":2, "firstname":"Anna", "lastname":"Hopp", "birthday":"1987-05-03","gender":"w","lastcontact":"2013-07-08","lifetime":5099},
+{"id":3, "firstname":"Christian", "lastname":"Cox", "birthday":"1991-02-21","gender":"m","lastcontact":"2013-08-01","lifetime":0},
+{"id":4, "firstname":"Roxy", "lastname":"Fox", "birthday":"1979-06-30","gender":"w","lastcontact":"2012-01-29","lifetime":21312},
+{"id":5, "firstname":"Eric", "lastname":"Adam", "birthday":"1969-11-21","gender":"m","lastcontact":"2013-03-18","lifetime":101991}]

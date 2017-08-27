@@ -1,0 +1,43 @@
+/* app css stylesheet */
+.bottom-margin-20{
+  margin-bottom: 20px !important;
+}
+.sortorder.reverse:after {
+    content: '\e093';
+}
+.sortorder:after {
+    content: '\e094';
+}
+.stepper .stepper-label{
+  position: absolute;
+  top: 2px;
+  left: 1.2rem;
+  border: none;
+  width: 90%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  outline: none;
+}
+
+.has-error .form-control-feedback:before{
+  content: '\e014';
+}
+
+.has-success .form-control-feedback:before{
+  content: '\e013';
+}
+
+.form-horizontal .has-datepicker-feedback .form-control-feedback {
+    top: 0;
+    right: 3.4rem;
+}
+.form-horizontal .has-stepper-feedback .form-control-feedback {
+    top: 0;
+    right: 3.4rem;
+}
+.hand-cursor{
+  cursor: pointer;
+}
